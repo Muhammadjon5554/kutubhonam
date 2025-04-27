@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mening Kutubxonam</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Mening Kutubxonam</h1>
+
+    <div id="book-form">
+      <h2>Kitob qo'shish</h2>
+      <form id="addBookForm" enctype="multipart/form-data">
+        <label for="title">Kitob nomi:</label>
+        <input type="text" id="title" name="title" required /><br /><br />
+
+        <label for="author">Muallif:</label>
+        <input type="text" id="author" name="author" required /><br /><br />
+
+        <label for="pages">Sahifa soni:</label>
+        <input type="number" id="pages" name="pages" required /><br /><br />
+
+        <label for="cover_img">Muqova rasmi:</label>
+        <input
+          type="file"
+          id="cover_img"
+          name="cover_img"
+          required
+        /><br /><br />
+
+        <button type="submit">Kitobni Qo'shish</button>
+      </form>
+    </div>
+
+    <hr />
+
+    <div id="books-list">
+      <h2>Barcha Kitoblar</h2>
+      <ul id="books"></ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
