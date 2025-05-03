@@ -7,12 +7,9 @@ import {
   postbook,
   putbook,
 } from "./controller/book.controller.js";
-import upload from "./fileupload/file.upload.js";
 
 const app = express();
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use("/uploads", express.static("uploads"));
 
 app.get("/", (req, res) => {
   res.send("Hello World");
